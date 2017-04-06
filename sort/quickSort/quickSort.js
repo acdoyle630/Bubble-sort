@@ -40,7 +40,7 @@
 
 
 
-
+/*
 var sortedObj ={};
 var piv = [2];
 const sort = ( arr, piv) => {
@@ -66,10 +66,44 @@ const sort = ( arr, piv) => {
 };
 
 
-console.log(sort([2,9,8,1,0]));
+console.log(sort([2,9,8,1,0]));*/
+
+const partion = ( arr, pivot ) => {
+  const left = [];
+  const right = [];
+
+  for (let i = 1; i < arr.length; i++) {
+    if ( arr[i] < pivot ){
+      left.push(arr[i]);
+    } else {
+      right.push(arr[i]);
+    }
+  }
+
+  return {
+    left,
+    right,
+  };
+};
+
+const quickSort = (arr) => {
+  // Base Case
+  if (arr.length <= 1) {
+    return arr;
+  }
+
+  // 1) Pick a Pivot
+  const pivot = arr[0];
+
+  // 2) Parition
+  const { left, right } = partion(arr, pivot);
+
+  // 3) Recusrively call quicksort on left and right and concat left to pivot and right to pivot
+  return quickSort(left).concat(pivot, quickSort(right));
+};
 
 
-
+console.log(quickSort([1,5,6,4]));
 
 
 
