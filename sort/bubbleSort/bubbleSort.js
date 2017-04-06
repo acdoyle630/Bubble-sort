@@ -39,29 +39,32 @@ console.log(test.sort([5,1,4,2,8]));*/
 //Imperative solved
 module.exports = () => {
   function sort( arr ) {
+  if( Array.isArray(arr) !== true ){
+    return false;
+  }
     var next;
     var prev;
     var clean = 0;
     while(clean < arr.length){
       for(var i=0; i<arr.length; i++){
-      if(arr[i] > arr[i+1]){
-        prev = arr[i+1];
-        next = arr[i];
-        arr[i] = prev;
-        arr[i+1] = next;
-        clean =0;
-      } else {
-        clean ++;
+        if (typeof arr[i] !== 'number'){
+          return false;
+        }
+        if(arr[i] > arr[i+1]){
+          prev = arr[i+1];
+          next = arr[i];
+          arr[i] = prev;
+          arr[i+1] = next;
+          clean =0;
+        } else {
+          clean ++;
+        }
       }
     }
-  }
-    return arr;
-  }
-  return{
-    sort,
+      return arr;
+    }
+    return{
+      sort,
+    };
   };
-};
 
-/*var testIm = imperativeBubble();
-console.log(testIm.sort([5, 1, 1, 4, 2, -1,  8]));
-*/

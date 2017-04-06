@@ -23,7 +23,7 @@ function mergeSort ( arr ) {
 
 
 function merge( arr1, arr2 ){
- // debugger;
+  debugger;
   if(arr1.length === 0 && arr2.length === 0){
     return;
   }
