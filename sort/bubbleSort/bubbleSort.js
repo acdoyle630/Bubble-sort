@@ -1,44 +1,6 @@
-/*jshint esversion: 6*/
-/*const wrapper = (  ) => {
-    current = 0;
-    var loops = 0;
-    var prev;
-    var next;
-  function sort ( arr ) {
-   debugger;
-    if(current === arr.length -1) {
-      loops ++;
-      current = 0;
-      if(loops === arr.length -1){
-      return arr;
-    }
-    return sort (arr,current);
-    }
-    if(arr[current] > arr [current+1]){
-      next = arr[current];
-      prev = arr[current + 1];
-      arr[current + 1] = next;
-      arr[current] = prev;
-      current ++;
-    }
-    if(arr[current] <= arr[current+1]){
-      current ++;
-      clean ++;
-    }
-    return sort(arr, current);
-   }
-    return {
-    sort,
-  };
-};*/
-
-/*
-var test = wrapper();
-console.log(test.sort([5,1,4,2,8]));*/
-
-//Imperative solved
+/*jshint esversion: 6 */
 module.exports = () => {
-  function sort( arr ) {
+  function bubbleSort( arr ) {
   if( Array.isArray(arr) !== true ){
     return false;
   }
@@ -62,9 +24,8 @@ module.exports = () => {
       }
     }
       return arr;
-    }
-    return{
-      sort,
-    };
+  }
+  return {
+    bubbleSort,
   };
-
+};
