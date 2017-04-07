@@ -10,7 +10,7 @@ function selection ( sortable arry )
 if min = array length
   return array
 smallest = array[min]
-  loop from i = min to array length; increment 1
+  loop from min... array length
     if i less than smallest
       swap indexes
     incremenet min

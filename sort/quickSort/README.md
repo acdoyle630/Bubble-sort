@@ -16,7 +16,7 @@ function partition ( arr, pivot )
   left = empty array
   right = empty array
 
- loop from i = 1 through array by 1
+ loop from 1...array length
   if array index i < pivot
   push into left
   else

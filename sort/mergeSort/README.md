@@ -8,7 +8,7 @@ function mergesort( sortable array )
     return array
   var left = empty array
   var right = empty array
-  loop through array from i=0 incriment by 1
+  loop from 0...array length
     if i is less than array lenght / 2
     push to left
     else

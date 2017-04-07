@@ -12,7 +12,7 @@ function bubbleSort ( array of sortable items )
     var prev
     var clean = 0
   while clean is less than list length
-    loop though list starting at i = 0, incrememnt 1 per pass
+    loop from 0 ... array length
       if any index is not a number
         return false
       if index i greater than next index

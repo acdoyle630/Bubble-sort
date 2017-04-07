@@ -11,11 +11,11 @@ function insert ( sortable array )
   return false
   if current = array length
   return array
-  loop through array from i=current increment by 1
+  loop from 0...array length
     if current index is less than index 0
       insert current at index 0
     if current index is less than previous index and greater than current index minus 2
-      insert current index at between current -1 and current -2
+      insert current index between current -1 and current -2
     increment current
     function insert ( new array )
     return array

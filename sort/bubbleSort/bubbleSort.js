@@ -1,5 +1,5 @@
 /*jshint esversion: 6 */
-module.exports = () => {
+const wrapper = () => {
   function bubbleSort( arr ) {
   if( Array.isArray(arr) !== true ){
     return false;
@@ -29,3 +29,4 @@ module.exports = () => {
     bubbleSort,
   };
 };
+

@@ -1,5 +1,5 @@
 /*jshint esversion: 6*/
-module.exports = () => {
+wrapper = () => {
     var current = 1;
     function insertionSort( arr ){
       if(Array.isArray(arr) !== true ){
