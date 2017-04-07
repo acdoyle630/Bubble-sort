@@ -33,5 +33,7 @@ function merge( left, right )
   return result
 ```
 
+## Performance
 
+Merge sort has a best, worst, and average case performance of O(n log n).  By halving the array everytime it divides the work.  As the length of the data increases the impact becomes less and less significant.
 
