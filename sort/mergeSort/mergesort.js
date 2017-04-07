@@ -1,4 +1,5 @@
 /*jshint esversion: 6*/
+
 module.exports = () => {
   function mergeSort ( arr ) {
     if( arr.length <= 1 ){
@@ -9,51 +10,38 @@ module.exports = () => {
     for( var i = 0; i < arr.length; i++){
       if( i < ( arr.length ) / 2 ){
         left.push(arr[i]);
-        //console.log( left);
       } else {
         right.push(arr[i]);
-        //console.log(right);
       }
     }
-    mergeSort(left);
-    //console.log(left);
-    mergeSort(right);
-    return merge( left, right );
+    return merge(mergeSort(left), mergeSort(right));
   }
-
-
-  function merge( arr1, arr2 ){
-    debugger;
-    if(arr1.length === 0 && arr2.length === 0){
-      return;
-    }
-    var results = [];
-    console.log('left ' +arr1);
-    console.log('right ' +arr2);
-   while (arr2.length !== 0 && arr1.length !== 0){
-    // if(arr1.length > 1){
-    //   arr1.shift();
-    // }
-    // if(arr2.length > 1){
-    //   arr2.shift();
-    // }
-      if(arr1[0] <= arr2[0] ){
-        results.push(arr1.shift());
+  function merge( left, right ){
+    var result =[];
+    while (left.length !==0 && right.length !==0){
+      if (left[0] <= right[0]) {
+        result.push(left.shift());
       } else {
-        results.push(arr2.shift());
+        result.push(right.shift());
       }
     }
-    while( arr1.length !== 0){
-      results.push(arr1.shift());
+    while (left.length) {
+      result.push(left.shift());
     }
-     while( arr2.length !== 0){
-      results.push(arr2.shift());
-     }
-    return results;
+    while(right.length){
+      result.push(right.shift());
+    }
+    return result;
   }
-  return {
+  return{
     mergeSort,
-    merge,
+    merge
   };
 };
-//console.log(mergeSort([1,6,3,4,8,10,5,1]));
+
+
+
+
+
+
+
