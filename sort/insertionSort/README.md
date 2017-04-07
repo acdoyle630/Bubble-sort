@@ -1,4 +1,4 @@
-# insertionSort
+# Insertion Sort
 
 Insertion sort is a sorting algorithm that works by comparing an index with all previous indexes to determine where it fits.  This example starts from the index zero and moves up.  As it moves down the list it isolates an index and compares to all previous indexes.  When it determines where it fits, it inserts the isolated index and moves all other indexes over.  If an index value is less than all others in the list, it replaces the first index.  Once is has perfomed this for every index the new array is returned.
 
