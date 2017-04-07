@@ -1,15 +1,15 @@
 /*jshint esversion: 6*/
 
-/*const chai = require('chai');
+const chai = require('chai');
 const expect = chai.expect;
 
-const mergeSort = require('../sort/mergSort/mergesort.js');
+const mergeSort = require('../sort/mergeSort/mergesort.js');
 const mergeSortModule = mergeSort();
 
-describe('it should be a function',() =>{
-  it('should be a function', () => {
-    expect(mergeSortModule).to.be.a('function');
+describe('mergeSort',() =>{
+  it('should be a object', () => {
+    expect(mergeSortModule).to.be.a('object');
   });
 });
 
-*/
+

@@ -6,7 +6,7 @@ const expect = chai.expect;
 const bubblesort = require('../sort/bubbleSort/bubbleSort.js');
 const mySortModule = bubblesort();
 
-describe('sort',() => {
+describe('bubbleSort',() => {
   it('should be a function', () => {
     expect(bubblesort).to.be.a('function');
   });

@@ -6,7 +6,7 @@ const expect = chai.expect;
 const quickSort = require('../sort/quickSort/quickSort.js');
 let quickSortModule = quickSort();
 
-describe ('quicksort',() =>{
+describe ('quickSort',() =>{
   it('should be an object', () => {
     expect(quickSortModule).to.be.a('object');
   });

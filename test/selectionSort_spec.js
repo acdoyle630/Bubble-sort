@@ -5,7 +5,7 @@ const expect = chai.expect;
 const selectionSort = require('../sort/selectionSort/selectionSort.js');
 var sortModule = selectionSort();
 
-describe('selection sort',() => {
+describe('selectionSort',() => {
   beforeEach(() => {
     sortModule = selectionSort();
   });
