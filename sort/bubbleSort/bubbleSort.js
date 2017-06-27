@@ -1,5 +1,5 @@
 /*jshint esversion: 6 */
-const wrapper = () => {
+module.exports = () => {
   function bubbleSort( arr ) {
   if( Array.isArray(arr) !== true ){
     return false;
